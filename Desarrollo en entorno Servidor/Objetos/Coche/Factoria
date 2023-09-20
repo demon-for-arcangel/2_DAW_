@@ -1,0 +1,8 @@
+<?php
+class Factoria{
+    static function generarMatricula($longitud = 7){
+        $caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXUZ0123456789';
+        $matricula = '';
+        $maxCaracteres = strlen($caracteres);
+    }
+}
