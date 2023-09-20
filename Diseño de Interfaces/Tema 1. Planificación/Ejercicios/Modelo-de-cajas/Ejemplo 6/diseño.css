@@ -1,0 +1,27 @@
+body {
+    margin: 0;    
+}
+
+
+.cajaBase {
+    background-color: blue; /* Color de fondo azul */ 
+    padding-top: 15%;
+    width: 15%;
+    border: 7px solid black;
+}
+
+.contenido{
+    background-color: yellow; 
+}
+
+#CajaBase1{
+    position: relative;
+    margin: 50px;
+}
+
+#contenido1{
+    width: 50%;
+    padding-top: 50%;
+    position: absolute;
+    top: 8px;
+}

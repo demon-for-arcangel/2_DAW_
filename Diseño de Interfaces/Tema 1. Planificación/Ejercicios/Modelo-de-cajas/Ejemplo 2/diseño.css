@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    background-color: #f0f0f0; /* Color de fondo del cuerpo */
+    
+}
+
+
+.cajaBase {
+    background-color: blue; /* Color de fondo azul */ 
+    padding-top: 15%;
+    width: 15%;
+    border: 7px solid black;
+}
+
+.contenido{
+    background-color: yellow; 
+    border: 7px solid orangered;
+}
+
+#CajaBase1{
+    position: relative;
+    margin: 50px;
+}
+
+#contenido1{
+    width: 50%;
+    padding-top: 50%;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
