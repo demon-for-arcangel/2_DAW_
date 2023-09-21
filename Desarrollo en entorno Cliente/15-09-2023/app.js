@@ -29,6 +29,11 @@ function guardar(){
     }
 }
 
+function validar(){
+    var nombre = document.getElementById('nombre').value
+    var apellido = document.getElementById('apellido').value
+}
+
 function limpiar(){
     document.getElementById('nombre').value = ''
     document.getElementById('apellido').value = ''
