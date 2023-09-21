@@ -32,6 +32,10 @@ function guardar(){
 function validar(){
     var correo = document.getElementById("correo").value
     var contrasena = document.getElementById("contrasena").value
+
+    if (correo.trim() == "" || contrasena.trim() == ""){ //el método trim() elimina los espacios en blanco en ambos extremos del string
+        alert('El correo y la contraseña no pueden estar vacíos')
+    }
 }
 
 function limpiar(){
