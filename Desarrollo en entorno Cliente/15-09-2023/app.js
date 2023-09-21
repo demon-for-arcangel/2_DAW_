@@ -73,6 +73,10 @@ function validarEmail(){
         msg += 'No incluye @'
     }
 
+    if (email.split('@').length > 2) {
+        msg += 'No puede tener más de un @';
+    }
+
     if (email.charAt(0) == '@'){
         msg += '\nNo puede empezar por @'
     }
