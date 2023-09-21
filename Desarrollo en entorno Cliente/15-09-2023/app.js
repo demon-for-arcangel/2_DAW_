@@ -19,8 +19,14 @@ function acceder(){
 }
 
 function guardar(){
-    var validado = false
-    validado = validar()
+    var validado = validar ()
+    if (validado) {
+        // Guardar los datos en el objeto persona
+        persona.nombre = document.getElementById('nombre').value
+        persona.apellido = document.getElementById('apellido').value
+
+        alert('Datos guardados correctamente.')
+    }
 }
 
 function limpiar(){
