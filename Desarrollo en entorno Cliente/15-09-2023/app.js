@@ -101,31 +101,25 @@ function validarDatos(){
     var dni = document.getElementById('dni').value
     var fechaNacimiento = document.getElementById('fechaNacimiento').value
     var msg = ''
-
     
     if (nombre.trim().length < 3 || nombre.trim().length > 30){
         msg += 'El nombre debe tener entre 3 y 30 caracteres.\n'
-        return msg
     }
 
     if (apellido1.trim().length < 2 || apellido1.trim().length > 30){
         msg += 'El primer apellido debe tener entre 2 y 30 caracteres.\n'
-        return msg
     }
 
     if (apellido2.trim().length < 2 || apellido2.trim().length > 30){
         msg += 'El segundo apellido debe tener entre 2 y 30 caracteres.\n'
-        return msg
     }
 
     if (!/^(\d{2}\/\d{2}\/\d{4})$/.test(fechaNacimiento)){
         msg += 'El formato de la fecha de nacimiento debe ser dd/mm/AAAA.\n'
-        return msg
     }
 
     if (!/^\d{8}[A-Z]$/.test(dni)){
         msg += 'El DNI no es válido. Debe tener 8 números seguidos de una letra.\n'
-        return msg
     } else {
         var letraDNI = dni.charAt(dni.length-1).toUpperCase();
         var numerosDNI = parseInt(dni.substring(0, dni.length - 1));
@@ -133,8 +127,7 @@ function validarDatos(){
 
         if (letraDNI !== letraCorrecta){
             msg += 'El DNI introducido no es válido.\n';
-            return msg
         }
     }
-    return true;
+    return msg;
 }
