@@ -136,5 +136,4 @@ function validarDatos(){
     }
 
     return true;
-
 }
