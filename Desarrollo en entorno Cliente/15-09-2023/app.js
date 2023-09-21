@@ -4,7 +4,7 @@ const persona = {
     dni: '05938561',
     correo: 'marinalaguna2004@gmail.com',
     pwd: 'admin123',
-    asignaturas: ['Servidor', 'Cliente']
+    fechaNacimiento: ''
 }
 
 function acceder(){
@@ -24,13 +24,6 @@ function acceder(){
     }
 }
 
-function limpiar(){
-    document.getElementById('nombre').value = ''
-    document.getElementById('apellido1').value = ''
-    document.getElementById('apellido2').value = ''
-    document.getElementById('dni').value = ''
-}
-
 function guardar(){
     var validado = validarDatos()
 
@@ -40,9 +33,20 @@ function guardar(){
         persona.apellido = document.getElementById('apellido1').value 
         persona.apellido2 = document.getElementById('apellido2').value 
         persona.dni = document.getElementById('dni').value
+        persona.fechaNacimiento = document.getElementById('fechaNacimiento').value
 
         alert('Datos guardados correctamente.')
+    }else{
+        alert(validado)
     }
+}
+
+function limpiar(){
+    document.getElementById('nombre').value = ''
+    document.getElementById('apellido1').value = ''
+    document.getElementById('apellido2').value = ''
+    document.getElementById('dni').value = ''
+    document.getElementById('fechaNacimiento').value = ''
 }
 
 function validarLogin(){
@@ -95,20 +99,42 @@ function validarDatos(){
     var apellido1 = document.getElementById('apellido1').value
     var apellido2 = document.getElementById('apellido2').value
     var dni = document.getElementById('dni').value
+    var fechaNacimiento = document.getElementById('fechaNacimiento').value
     var msg = ''
 
-    if (nombre.trim() == '' || apellido1.trim() == '' || apellido2.trim() == '' || dni.trim() == ''){
-        msg += 'Todos los campos son obligatorios.\n'
+    
+    if (nombre.trim().length < 3 || nombre.trim().length > 30){
+        msg += 'El nombre debe tener entre 3 y 30 caracteres.\n';
+    }
+
+    if (apellido1.trim().length < 2 || apellido1.trim().length > 30){
+        msg += 'El primer apellido debe tener entre 2 y 30 caracteres.\n';
+    }
+
+    if (apellido2.trim().length < 2 || apellido2.trim().length > 30){
+        msg += 'El segundo apellido debe tener entre 2 y 30 caracteres.\n';
+    }
+
+    if (!/^(\d{2}\/\d{2}\/\d{4})$/.test(fechaNacimiento)){
+        msg += 'El formato de la fecha de nacimiento debe ser dd/mm/AAAA.\n';
     }
 
     if (!/^\d{8}[A-Z]$/.test(dni)){
-        msg += 'El DNI no es válido. Debe tener 8 números seguidos de una letra.'
+        msg += 'El DNI no es válido. Debe tener 8 números seguidos de una letra.\n';
+    } else {
+        var letraDNI = dni.charAt(dni.length-1).toUpperCase();
+        var numerosDNI = parseInt(dni.substring(0, dni.length - 1));
+        var letraCorrecta = 'TRWAGMYFPDXBNJZSQVHLCKE'.charAt(numerosDNI % 23);
+
+        if (letraDNI !== letraCorrecta){
+            msg += 'El DNI introducido no es válido.\n';
+        }
     }
 
     if (msg !== ''){
-        alert(msg)
-        return false;
+        return msg;
     }
 
     return true;
+
 }
