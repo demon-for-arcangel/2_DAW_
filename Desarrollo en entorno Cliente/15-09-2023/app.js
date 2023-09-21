@@ -30,8 +30,8 @@ function guardar(){
 }
 
 function validar(){
-    var nombre = document.getElementById('nombre').value
-    var apellido = document.getElementById('apellido').value
+    var correo = document.getElementById("correo").value
+    var contrasena = document.getElementById("contrasena").value
 }
 
 function limpiar(){
