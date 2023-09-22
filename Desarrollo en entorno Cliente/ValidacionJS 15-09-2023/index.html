@@ -3,17 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <title>Document</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <form onsubmit="return validarLogin()" >
-            Introduce el correo electrónico <br>
-            <input type="email" placeholder="correo@ejemplo.com"/>
-            <br> <br>
-            Introduce la contraseña <br>
-            <input type="password" placeholder="contraseña"/>
-            <br> <br>
-            <input type=button id="entrar" onclick = "acceder()" value="Iniciar Sesión">
-        </form>
+        <div class = 'container'>
+            <form onsubmit="return validarLogin()" >
+                Introduce el correo electrónico 
+                <input type="email" placeholder="correo@ejemplo.com"/>
+                Introduce la contraseña
+                <input type="password" placeholder="contraseña"/>
+                <input type=button id="entrar" onclick = "acceder()" value="Iniciar Sesión">
+            </form>    
+        </div>
     </body>
     <script src="app.js"></script>
 </html>

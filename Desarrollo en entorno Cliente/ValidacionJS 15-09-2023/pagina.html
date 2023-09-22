@@ -3,28 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <title>Home</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <form>
-            <output for="text">Nombre:</output>
-            <input type="text" id="nombre" name="nombre">
-            <br> <br>
-            <output for="text">Apellido1:</output>
-            <input type="text" id="apellido1" name="apellido1">
-            <br> <br>
-            <output for="text">Apellido2:</output>
-            <input type="text" id="apellido2" name="apellido2">
-            <br><br>
-            <output for="dni">DNI:</output>
-            <input type="text" id="dni" name="dni">
-            <br> <br>
-            <output for="fechaNacimiento">Fecha Nacimiento:</output>
-            <input type="text" id="fechaNacimiento" name="fechaNacimiento">
-            <br> <br>
-            <input type="button" onclick="guardar()" value="Guardar"></button>
-            <br><br>
-            <input type="button" onclick="limpiar()" value="Limpiar"></button>
-        </form>
+        <div class = 'container'>
+            <form>
+                <output for="text">Nombre:</output>
+                <input type="text" id="nombre" name="nombre">
+                <br> <br>
+                <output for="text">Apellido1:</output>
+                <input type="text" id="apellido1" name="apellido1">
+                <br> <br>
+                <output for="text">Apellido2:</output>
+                <input type="text" id="apellido2" name="apellido2">
+                <br><br>
+                <output for="dni">DNI:</output>
+                <input type="text" id="dni" name="dni">
+                <br> <br>
+                <output for="fechaNacimiento">Fecha Nacimiento:</output>
+                <input type="text" id="fechaNacimiento" name="fechaNacimiento">
+                <br> <br>
+                <input type="button" onclick="guardar()" value="Guardar"></button>
+                <br><br>
+                <input type="button" onclick="limpiar()" value="Limpiar"></button>
+            </form>    
+        </div>
     </body>
     <script src="app.js"></script>
 </html>
