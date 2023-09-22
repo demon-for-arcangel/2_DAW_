@@ -33,8 +33,7 @@ input[type="text"] {
     border-radius: 4px;
 }
 
-#guardar,
-#limpiar, #entrar {
+.boton {
     margin-top: 10px;
     padding: 10px 20px;
     display: inline-block;
@@ -44,11 +43,12 @@ input[type="text"] {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s; /* Transición de color */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-left: 10px; /* Espacio entre botones */
 }
 
-#guardar:hover,
-#limpiar:hover, #entrar:hover {
-    background-color: #45a049; /* Color de fondo del botón al pasar el mouse */
+.boton:hover {
+    background-color: #1f5ac7; /* Color de fondo del botón al pasar el mouse */
 }
 
 output {
