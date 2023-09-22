@@ -27,7 +27,13 @@ function acceder(){
 function guardar(){
     var validado = validarDatos()
 
-    if (validado){
+    if (validado === ''){
+        persona.nombre = document.getElementById('nombre').value
+        persona.apellido = document.getElementById('apellido1').value 
+        persona.apellido2 = document.getElementById('apellido2').value 
+        persona.dni = document.getElementById('dni').value
+        persona.fechaNacimiento = document.getElementById('fechaNacimiento').value
+
         alert('Datos guardados correctamente.')
     }else{
         alert(validado)
