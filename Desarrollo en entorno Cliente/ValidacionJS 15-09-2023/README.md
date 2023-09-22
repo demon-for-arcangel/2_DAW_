@@ -1,4 +1,4 @@
-# EJERCICIO1
+# EJERCICIO1 DE JAVASCRIPT
 
 Crear las pantallas de login y de datos de un usuario utilizando html y js para las validaciones de los campos. Las ventanas tienen que tener las siguientes características:
 
