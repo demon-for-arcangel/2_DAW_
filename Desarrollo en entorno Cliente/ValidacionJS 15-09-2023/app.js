@@ -71,14 +71,22 @@ function validarLogin(){
 function validarEmail(){
     var email = document.querySelector('input[type="email"]').value
     var msg = ''
+    
+    if (email.includes('@')){
+        var partes = email.split('@') //split dividirá nuestro email en partes donde encuentre el @
+
+        if (partes.length > 2){
+            msg = 'No puede contener más de un @'
+        }
+    }
 
     if (!email.includes('@')){
         msg += 'No incluye @'
     }
 
-    if (email.split('@').length > 2) {
+/*     if (email.split('@').length > 2) {
         msg += 'No puede tener más de un @';
-    }
+    } */
 
     if (email.charAt(0) == '@'){
         msg += '\nNo puede empezar por @'
