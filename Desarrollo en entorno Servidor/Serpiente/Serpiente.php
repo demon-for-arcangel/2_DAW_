@@ -1,8 +1,8 @@
 <?php 
 class Serpiente{
-    private $anillas = [];
-    private $edad = 0;
-    private $viva = true;
+    public $anillas = [];
+    public $edad = 0;
+    public $viva = true;
 
     public function __construct($edad = 0){
         if ($edad < 0) {

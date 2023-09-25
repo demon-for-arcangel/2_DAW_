@@ -2,7 +2,7 @@
 require_once 'Serpiente.php';
 
 class Nido{
-    private $serpientes = [];
+    public $serpientes = [];
 
     public function agregarSerpiente(Serpiente $serpiente){
         if (count($this -> serpientes) < 20){

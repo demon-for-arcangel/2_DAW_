@@ -1,6 +1,6 @@
 <?php 
 class Anilla{
-    private $color;
+    public $color;
 
 	public function __construct($color) {
 		$this->color = $color;
