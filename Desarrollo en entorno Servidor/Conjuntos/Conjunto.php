@@ -1,7 +1,7 @@
 <?php 
 
 class Conjunto {
-    private $elementos = array();
+    public $elementos = array();
 
     public function agregarElemento($elemento) {
         $this->elementos[] = $elemento;
