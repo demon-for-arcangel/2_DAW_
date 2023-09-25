@@ -10,6 +10,10 @@ class Nido{
         }
     }
 
+    public function cantidadSerpientes() {
+        return count($this->serpientes);
+    }    
+
     public function simularUnAnio(){
         foreach ($this -> serpientes as $serpiente){
             if ($serpiente -> estaViva()){
