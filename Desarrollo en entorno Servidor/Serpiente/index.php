@@ -13,8 +13,8 @@ $argus = explode('/',$paths);
 unset($argus[0]);
 
 if (count($argus) == 2){
-    $cantidad = (int)$argus[1];
-    $edad = (int)$argus[2];
+    $cantidad = $argus[1];
+    $edad = $argus[2];
 
     $nido = new Nido();
 
@@ -31,7 +31,7 @@ if (count($argus) == 2){
                     ' Edad: ' . $serpiente -> getEdad()]);
 }else{
     if (count($argus) == 1 ){
-        $edad = (int)$argus[1];
+        $edad = $argus[1];
         $serpiente = new Serpiente($edad);
 
         $cod = 200;
