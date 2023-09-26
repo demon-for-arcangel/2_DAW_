@@ -10,9 +10,9 @@ $perro->comer();
 $perro->dormir();
 $perro->hacerRuido();
 if ($perro->hacerCaso()) {
-    echo $perro->nombre . ' hizo caso.';
+    echo $perro->nombre . ' hizo caso.<br>';
 } else {
-    echo $perro->nombre . ' no hizo caso.';
+    echo $perro->nombre . ' no hizo caso.<br>';
 }
 $perro->sacarPaseo();
 
@@ -21,8 +21,8 @@ $gato->comer();
 $gato->dormir();
 $gato->hacerRuido();
 if ($gato->hacerCaso()) {
-    echo $gato->nombre . ' hizo caso.';
+    echo $gato->nombre . ' hizo caso.<br>';
 } else {
-    echo $gato->nombre . ' no hizo caso.';
+    echo $gato->nombre . ' no hizo caso.<br>';
 }
 $gato->toserBolaPelo();

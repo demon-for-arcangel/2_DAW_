@@ -3,7 +3,7 @@ require_once 'Animal.php';
 
 class Gato extends Animal {
     public function hacerRuido() {
-        echo $this->nombre . ' maulla';
+        echo $this->nombre . ' maulla<br>';
     }
 
     public function hacerCaso() {
@@ -11,6 +11,6 @@ class Gato extends Animal {
     }
 
     public function toserBolaPelo() {
-        echo $this->nombre . ' está tosiendo una bola de pelo.';
+        echo $this->nombre . ' está tosiendo una bola de pelo.<br>';
     }
 }
