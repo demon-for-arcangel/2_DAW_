@@ -13,11 +13,11 @@ class Parque {
             if (empty($sector)) {
                 $this->sectores[$indice] = $animal;
                 $this->animales[] = $animal;
-                echo "{$animal->getNombre()} ha entrado al sector $indice.\n";
+                echo $animal->getNombre() . ' ha entrado al sector ' . $indice;
                 return;
             }
         }
-        echo "No hay espacio para {$animal->getNombre()}. Se va del parque.\n";
+        echo 'No hay espacio para' . $animal->getNombre() . 'Se va del parque.';
     }
 
     public function realizarAccionesAleatorias() {
@@ -46,7 +46,7 @@ class Parque {
                 if (isset($this->sectores[$posicion]) && empty($this->sectores[$posicion])) {
                     $this->sectores[$posicion] = $animal;
                     unset($this->sectores[$posicionActual]);
-                    echo "{$animal->getNombre()} se ha movido de sector $posicionActual a $posicion.\n";
+                    echo $animal->getNombre() . 'se ha movido de sector ' . $posicionActual . ' a ' .$posicion;
                     break;
                 }
             }
@@ -66,14 +66,13 @@ class Parque {
     }
 
     public function imprimirEstado() {
-        echo "Estado del parque:\n";
+        echo 'Estado del parque:';
         foreach ($this->sectores as $indice => $sector) {
             if (empty($sector)) {
-                echo "Sector $indice: Libre\n";
+                echo 'Sector ' . $indice . ': Libre';
             } else {
-                echo "Sector $indice: {$sector->getNombre()} ({$sector->getRaza()})\n";
+                echo 'Sector ' . $indice . ': ' . $sector->getNombre() . $sector->getRaza();
             }
         }
-        echo "---------------\n";
     }
 }

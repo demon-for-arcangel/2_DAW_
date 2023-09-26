@@ -3,14 +3,14 @@ require_once 'Animal.php';
 
 class Perro extends Animal {
     public function comer() {
-        echo "{$this->nombre} está comiendo.\n";
+        echo $this->nombre . ' está comiendo.';
     }
 
     public function dormir() {
-        echo "{$this->nombre} está durmiendo.\n";
+        echo $this->nombre . ' está durmiendo.';
     }
 
     public function hacerRuido() {
-        echo "{$this->nombre} ladra: ¡Guau! ¡Guau!\n";
+        echo $this->nombre . ' ladra: ¡Guau! ¡Guau!';
     }
 }
