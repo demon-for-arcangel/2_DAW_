@@ -14,15 +14,15 @@ class Animal {
     }
 
     public function vacunar() {
-        echo "{$this->nombre} ha sido vacunado.\n";
+        echo $this->nombre . ' ha sido vacunado.';
     }
 
     public function comer() {
-        echo "{$this->nombre} está comiendo.\n";
+        echo $this->nombre . ' está comiendo.';
     }
 
     public function dormir() {
-        echo "{$this->nombre} está durmiendo.\n";
+        echo $this->nombre . ' está durmiendo.';
     }
 
     public function hacerRuido() {
