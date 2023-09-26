@@ -11,6 +11,6 @@ class Gato extends Animal {
     }
 
     public function hacerRuido() {
-        echo $this->nombre . ' maulla: ¡Miau! ¡Miau!';
+        echo $this->nombre . ' maulla';
     }
 }

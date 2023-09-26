@@ -12,6 +12,6 @@ class Elefante extends Animal {
     }
 
     public function hacerRuido() {
-        echo $this->nombre . ' barrita: ¡Brrrrrr!';
+        echo $this->nombre . ' barrita';
     }
 }

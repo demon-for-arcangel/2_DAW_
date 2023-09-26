@@ -11,6 +11,6 @@ class Perro extends Animal {
     }
 
     public function hacerRuido() {
-        echo $this->nombre . ' ladra: ¡Guau! ¡Guau!';
+        echo $this->nombre . ' ladra';
     }
 }
