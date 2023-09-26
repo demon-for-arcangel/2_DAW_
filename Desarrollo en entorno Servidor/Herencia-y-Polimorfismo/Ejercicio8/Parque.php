@@ -13,11 +13,11 @@ class Parque {
             if (empty($sector)) {
                 $this->sectores[$indice] = $animal;
                 $this->animales[] = $animal;
-                echo $animal->getNombre() . ' ha entrado al sector ' . $indice;
+                echo $animal->getNombre() . ' ha entrado al sector ' . $indice . '<br>';
                 return;
             }
         }
-        echo 'No hay espacio para' . $animal->getNombre() . 'Se va del parque.';
+        echo 'No hay espacio para' . $animal->getNombre() . 'Se va del parque.<br>';
     }
 
     public function realizarAccionesAleatorias() {
@@ -46,7 +46,7 @@ class Parque {
                 if (isset($this->sectores[$posicion]) && empty($this->sectores[$posicion])) {
                     $this->sectores[$posicion] = $animal;
                     unset($this->sectores[$posicionActual]);
-                    echo $animal->getNombre() . 'se ha movido de sector ' . $posicionActual . ' a ' .$posicion;
+                    echo $animal->getNombre() . 'se ha movido de sector ' . $posicionActual . ' a ' .$posicion . '<br>';
                     break;
                 }
             }
@@ -59,9 +59,9 @@ class Parque {
         if (rand(1, 2) === 1) {
             unset($this->sectores[$indiceSector]);
             $this->animales = array_values(array_diff($this->animales, [$animal]));
-            echo "{$animal->getNombre()} ha salido del parque.\n";
+            echo "{$animal->getNombre()} ha salido del parque.<br>";
         } else {
-            echo "{$animal->getNombre()} se queda en el parque.\n";
+            echo "{$animal->getNombre()} se queda en el parque.<br>";
         }
     }
 
@@ -69,9 +69,9 @@ class Parque {
         echo 'Estado del parque:';
         foreach ($this->sectores as $indice => $sector) {
             if (empty($sector)) {
-                echo 'Sector ' . $indice . ': Libre';
+                echo 'Sector ' . $indice . ': Libre<br>';
             } else {
-                echo 'Sector ' . $indice . ': ' . $sector->getNombre() . $sector->getRaza();
+                echo 'Sector ' . $indice . ': ' . $sector->getNombre() . $sector->getRaza() . '<br>';
             }
         }
     }
